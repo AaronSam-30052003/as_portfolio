@@ -637,13 +637,167 @@ section {
 
     .text h5 {
         font-size: 1.5rem;
+        margin-top:3%;
     }
 
     .text p, .btn-group .btn {
         font-size: 0.875rem;
+        margin-top:1%;
+        
+    }
+    .edu-title {
+    margin-top: 30px; /* Reduced for mobile */
+    margin-left: 0; /* Center aligned for mobile */
+    text-align: center;
+}
+
+.edu-title h5 {
+    color: #00fedc;
+    font-size: 125%;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: -10px;
+    text-align: center; /* Center the text */
+    margin-left: 0; /* Remove the left margin */
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column; /* Stack items vertically */
+    align-items: center; /* Center-align the timeline items */
+    margin-left: 0; /* Remove left margin */
+    margin-right: 0; /* Remove right margin */
+    width: 100%; /* Ensure it takes the full width of the container */
+}
+
+.timeline-item {
+    position: relative;
+    padding-left: 0;
+    margin-bottom: 30px; /* Reduced margin for mobile */
+    width: 80%; /* Set a width to keep it within the view */
+}
+
+.timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    max-width: 100%; /* Ensure it takes full width */
+    position: relative;
+}
+
+.timeline ul li {
+    margin-bottom: 15px; /* Reduced margin for mobile */
+    padding-left: 10px;
+    border-left: 2px solid #00aaff;
+    position: relative;
+}
+
+.timeline ul li::before {
+    content: '';
+    position: absolute;
+    left: -8px; /* Adjusted for better centering on mobile */
+    top: 15px;
+    width: 12px; /* Slightly smaller dot for mobile */
+    height: 12px;
+    border-radius: 50%;
+    background-color: #00aaff;
+}
+
+.timeline-item::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0; /* Align to the left for mobile */
+    transform: translateX(0); /* Remove transform */
+    height: 100%;
+    width: 2px;
+    background-color: #00aaff;
+}
+
+.timeline-item::after {
+    content: '';
+    position: absolute;
+    top: 10px;
+    left: -15px; /* Adjusted for better centering on mobile */
+    height: 15px;
+    width: 15px;
+    border-radius: 50%;
+    background-color: #00aaff;
+}
+
+.timeline-content {
+    background-color: rgba(255, 255, 255, 0.1);
+    padding: 10px 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+    margin-left: 0;
+    width: 100%; /* Take full width on mobile */
+    max-width: 100%; /* Ensure no width restriction */
+}
+
+.timeline-content h3 {
+    margin: 0 0 10px;
+    font-size: 18px;
+    color: #00fedc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Center-align text */
+}
+
+.timeline-content p {
+    margin: 0;
+    font-size: 16px;
+    color: #ffffff;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Center-align text */
+}
+
+.internship-details {
+    flex: 1;
+    max-width: 100%; /* Allow full width on mobile */
+    padding-left: 0; /* Remove padding for mobile */
+    text-align: center; /* Center-align content */
+    margin-top: 20px; /* Add margin on top to separate sections */
+}
+
+.internship-details h3 {
+    margin-bottom: 20px;
+    color: #00fedc;
+    font-size: 18px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Center-align text */
+}
+
+.internship-details p {
+    color: #ffffff;
+    font-size: 16px;
+    margin-bottom: 20px;
+    line-height: 1.5;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    text-align: center; /* Center-align text */
+}
+
+
+
+    .edu-title h5 {
+        font-size: 110%; /* Slightly smaller font size for mobile */
     }
 
-    .skills-wrapper, .timeline, .project-content, .achievements, .contact {
+    .timeline-item::after {
+        left: 0; /* Adjust for better centering on mobile */
+    }
+
+    .timeline-content h3 {
+        font-size: 16px; /* Slightly smaller font size for mobile */
+    }
+
+    .internship-details p {
+        font-size: 14px; /* Slightly smaller font size for mobile */
+    }
+
+
+    
+
+    .skills-wrapper, .achievements, .contact {
         text-align: center;
     }
 }
