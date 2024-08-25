@@ -625,6 +625,28 @@ section {
   .copyright {
     font-size: 12px;
   }
+@media only screen and (max-width: 767px) {
+    .header {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .content-wrapper, .text, .btn-group, .skills-wrapper, .timeline, .project-content, .achievements, .contact {
+        padding: 1rem 0.5rem;
+    }
+
+    .text h5 {
+        font-size: 1.5rem;
+    }
+
+    .text p, .btn-group .btn {
+        font-size: 0.875rem;
+    }
+
+    .skills-wrapper, .timeline, .project-content, .achievements, .contact {
+        text-align: center;
+    }
+}
 
 
 
