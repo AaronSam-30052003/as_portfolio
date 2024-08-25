@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dim & Dip</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 20px;
+            background-color: palevioletred;
+            color: #333;
+            opacity: 0; /* Start with the body invisible */
+            transition: opacity 1s ease-in; /* Fade-in effect */
+        }
+
+        h1 {
+            text-align: center;
+            color: aqua;
+            font-size: 36px;
+            margin-bottom: 20px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            opacity: 0; /* Start with the heading invisible */
+            transition: opacity 2s ease-in; /* Fade-in effect */
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            overflow: hidden;
+        }
+
+        .slider {
+            position: relative;
+            width: 100%;
+            height: auto;
+        }
+
+        .slides {
+            display: flex;
+            flex-direction: column; /* Stack images vertically */
+            overflow: hidden;
+            position: relative;
+        }
+
+        .slides img {
+            width: 100%;
+            height: auto;
+            opacity: 0; /* Start with images invisible */
+            transform: translateY(15px); /* Slight slide down effect */
+            transition: opacity 2s ease-in, transform 2s ease-in; /* Fade-in and transform effects */
+            margin-bottom: 10px; /* Add space between images */
+        }
+
+        /* Optional: To ensure images take up space initially */
+        .slides img.visible {
+            opacity: 1;
+            transform: translateY(0); /* Move to original position when visible */
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>AUTOMATED DIPPING SYSTEM</h1>
+        <div class="slider">
+            <div class="slides">
+                <img src="dim1.jpg" alt="Description of Image 1">
+                <img src="dim2.jpg" alt="Description of Image 2">
+                <img src="dim3.jpg" alt="Description of Image 3">
+                <img src="dim4.jpg" alt="Description of Image 4">
+                <img src="dim5.jpg" alt="Description of Image 5">
+                <img src="dim6.jpg" alt="Description of Image 5">
+                <img src="dim7.jpg" alt="Description of Image 5">
+                <img src="dim8.jpg" alt="Description of Image 5">
+                
+            </div>
+        </div>
+    </div>
+
+    <script>
+        window.onload = function() {
+            // Fade in the body
+            document.body.style.opacity = '1';
+
+            // Fade in the header after a delay
+            setTimeout(function() {
+                document.querySelector('h1').style.opacity = '1';
+            }, 1000); // 1-second delay
+
+            // Fade in images one by one with a slide-down effect
+            const images = document.querySelectorAll('.slides img');
+            images.forEach((img, index) => {
+                setTimeout(() => {
+                    img.classList.add('visible'); // Add class to make the image visible
+                }, 2000 * (index + 1)); // Delay based on image index
+            });
+        };
+    </script>
+</body>
+</html>

@@ -1,0 +1,1007 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AARON SAM.AS</title>
+    <style>
+        
+        body {
+            background-image: url('1.jpg');
+            background-size: cover;
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            scroll-behavior: smooth; /* Enables smooth scrolling */
+        }
+
+        .header-area {
+            position: fixed; /* Keeps the header fixed at the top */
+            top: 0;
+            width: 100%; /* Ensures the header spans the full width of the page */
+            z-index: 1000; /* Keeps the header on top of other content */
+            background-color: rgba(0, 0, 0, 0.8); /* Optional: semi-transparent background */
+            padding: -1%;
+            text-align:end;
+        }
+
+        .header {
+            display: flex;
+            justify-content: space-between; /* Keeps items spaced evenly */
+            align-items: center;
+            margin-left: 780px;
+            margin-right: 0;
+            width: 80%; /* Adjust width to center the header content */
+            padding-top: 20px; /* Optional: Adjusts the position slightly lower vertically */
+        }
+        .navbar {
+            list-style: none;
+            display: flex;
+            padding: 0;
+            margin-bottom: 20px; /* Adds some space below the navbar */
+            justify-content:left; /* Centers the navbar horizontally */
+        }
+
+        .navbar li {
+            margin: 0 15px; /* Horizontal spacing between navbar items */
+            margin-right: 5%; /* Extra margin on the right */
+        }
+
+        .navbar li a {
+            color: #00aaff;
+            text-decoration: none;
+            font-weight: bold;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .menu_icon {
+            display: none;
+        }
+
+        .content-wrapper {
+            display: flex;
+            align-items: center;
+            padding: 55px; /* Added padding to offset fixed header */
+            min-height: 100vh; /* Ensure full viewport height */
+            justify-content: space-between;
+        }
+
+        .content-wrapper img {
+            border-radius: 50%;
+            margin-right: 50px;
+            border: 2px solid violet;
+            width: 300px;
+            height: auto;
+            margin-bottom:2%;
+        }
+
+        .text {
+            max-width: 500px;
+            flex: 1; /* Ensures text content takes up available space */
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 10%;
+        }
+
+        .text h5 {
+            color: #00fedc;
+            font-size: 3rem;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            margin-top: 25%;
+        }
+        
+        .text p {
+            color: #ffffff;
+            font-size: 20px;
+            transform: translateY(-100px);
+            font-family:Georgia, 'Times New Roman', Times, serif;
+            text-align: justify;
+            margin-top: 5%;
+        }
+        .btn-group{
+  margin: 45px 0;
+  margin-top: -45px;
+}
+.btn-group .btn{
+  border-color: #d5d5d5;
+  color: #fff;
+  background-color: #333;
+  padding:12px 25px;
+  
+  margin-left: 299px;
+  margin-top: -50px;
+  border-radius: 30px;
+  border: 2px solid #e5e5e5;
+  box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
+}
+.btn.active{
+  border-color:#00fedc;
+ 
+}
+
+        .skills-wrapper {
+            display: flex;
+            flex-direction: column; /* Stack the skill containers vertically */
+            align-items: flex-start; /* Align the skill containers to the right */
+            margin-left: 50px; /* Add some space between the text and the skills */
+        }
+
+        .skill-item {
+            border-radius: 20px; /* Rounded corners */
+            border: 2px solid #00aaff; /* Border color */
+            padding: 10px 15px; /* Padding inside each container */
+            margin-bottom: 10px; /* Space between skill containers */
+            font-weight: bold; /* Bold text */
+            font-family: Georgia, 'Times New Roman', Times, serif; /* Font style */
+            color: #00aaff; /* Text color to match the border */
+            background-color: transparent; /* Transparent background */
+            width: 200px; /* Fixed width to align containers */
+            text-align: center; /* Center the text inside the container */
+        }
+        .edu-title{
+            margin-top: 60px;
+            margin-left: 6%;
+        }
+        .edu-title h5{
+            color: #00fedc; 
+            font-size: 125%; 
+            font-family: Georgia, 'Times New Roman', Times, serif; 
+            margin-bottom: -10px; /* Space between the header and the timeline content */
+            text-align: left; /* Align the text to the right */
+            margin-left: 200px;
+        }
+        .timeline {
+            display: flex;
+            right:5%; /* Center the timeline horizontally */
+            align-items: center; /* Center the timeline vertically */
+            margin-left: 100px;
+        }
+        .timeline-item {
+            position: relative;
+            padding-left: 0;
+            margin-bottom: 50px;
+        }
+        .timeline ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    max-width: 600px; /* Set a max-width to keep it within a reasonable size */
+    width: 100%; /* Ensure it takes full width of the container */
+    position: relative;
+}
+.timeline ul li {
+    margin-bottom: 20px;
+    padding-left: 10px; /* Adjust padding to ensure text aligns properly */
+    border-left: 2px solid #00aaff;
+    position: relative;
+}
+.timeline ul li::before {
+    
+    content: '';
+    position: absolute;
+    left: 0; /* Position the dot in the center horizontally */
+    transform: translateX(-50%); /* Center the dot horizontally */
+    top: 20px;
+    width: 15px;
+    height: 15px;
+    border-radius: 50%;
+    background-color: #00aaff;
+}
+
+
+        .timeline-item::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 50px;
+            transform: translateX(-40%); /* Center the vertical line */
+            height: 100%;
+            width: 2px;
+            background-color: #00aaff;
+            
+            
+        }
+        .timeline-item::after {
+            content: '';
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            height: 20px;
+            width: 20px;
+            border-radius: 50%;
+            background-color: #00aaff;
+        }
+        .timeline-content {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 10px 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+            margin-left: 0; /* Ensure no additional left margin */
+            width: auto; /* Remove width restriction if any */
+            max-width: 100%;
+        }
+        
+        .timeline-content h3 {
+            margin: 0 0 10px;
+            font-size: 18px;
+            color: #00fedc;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .timeline-content p {
+            margin: 0;
+            font-size: 16px;
+            color: #ffffff;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        .timeline {
+            flex: 1; /* Allow timeline to take up one portion of the space */
+            max-width: 50%; /* Ensure timeline doesn't take more than half the space */
+        }
+
+        .internship-details {
+            flex: 1; /* Allow internship details to take up the remaining space */
+            max-width: 50%; /* Ensure internship details don't take more than half the space */
+            padding-left: 20px; /* Add some space between the timeline and internship details */
+        }
+
+        .timeline ul {
+            max-width: 100%; /* Ensure the timeline takes up the full width of its container */
+        }
+
+        .internship-details h3 {
+            margin-bottom: 20px;
+            color: #00fedc;
+            font-size: 18px;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+
+        .internship-details p {
+            color: #ffffff;
+            font-size: 16px;
+            margin-bottom: 20px;
+            line-height: 1.5;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+      
+        .project-content{
+            padding: 90px 0;
+        }
+        .project-title{
+        margin-bottom: 40px;
+        text-align: center;
+        }
+.project-title h4{
+  
+  margin-top: 40px;
+  font-size: 30px;
+  line-height: 40px;
+  color:#00fedc;
+  margin-bottom:20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.project-title p {
+    text-shadow: 1px 1px 1px rgb(0, 183, 255);
+    font-size: 30px;
+    padding: 10px;
+    width: auto; /* Auto width to fit content */
+    height: auto; /* Auto height to fit content */
+    margin-left: 3%; /* Adjust as needed */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    color:white;
+}
+
+.projects{
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;;
+}
+.project{
+    /* padding: 30px 15px; */
+    color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+    border-radius: 30px;
+    width: 30%;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 25%;
+    transition: .3s;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Optional: Adds rounded corners to the images */
+    margin-bottom: 50px;  /* Space between image and description */
+}
+
+.project-item p {
+    color: #ffffff;  /* Text color */
+    font-size: 16px;
+    text-align: center;  /* Centers the description text */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.project h4{
+  font-size: 26px;
+  text-transform: capitalize;
+  margin: 20px 0;
+  counter-reset: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:white;
+}
+.project p{
+  text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+.project:hover{
+  border-color:#00fedc;
+}
+.project-publications {
+    text-align: center;
+    margin-top: 5%; /* Adjust to position the section as needed */
+}
+
+.project-publications h4 {
+    color: #00fedc;
+    margin-bottom: 2%;
+    margin-left: -70%;
+    font-size: 25px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.project-publications p {
+    color: white;
+    font-size: 19px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: -42%;
+}
+
+.project-publications .images {
+    display: flex;
+    justify-content: center; /* Center the images horizontally */
+    gap: 20px; /* Adjust space between images */
+}
+
+.project-publications img {
+    width: 600px; /* Set fixed width for images */
+    height: 500px; /* Maintain aspect ratio */
+    border-radius: 10px; /* Optional: rounded corners */
+    margin-top: 5%;
+}
+* {
+        box-sizing: border-box;
+      }
+
+      .column {
+        float: left;
+        width: 33.33%;
+        padding: 15px;
+        margin-left: 0%;
+        margin-right: -1%;
+        margin-bottom: -1%;
+        
+      }
+
+      /* Clearfix (clear floats) */
+      .row::after {
+        content: "";
+        clear: both;
+        display: table;
+        margin-top: 150px;
+        margin-bottom: 90px;
+        
+      }
+      .row h4{
+        color:#00fedc;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-bottom: 5%;
+        margin-top: 43%;
+        margin-left: 4%;
+        font-size: 25px;
+      }
+      .row p{
+        color:white;
+        margin-left: 5%;
+        margin-top: -3%;
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        font-size: 20px;
+      }
+      .columns {
+    float: left;
+    width: 33.33%;
+    padding: 15px;
+    margin-left: 0%;
+    margin-right: -1%;
+    margin-bottom: 40px; /* Add space between rows */
+    margin-top: -4%;
+}
+
+/* Clearfix (clear floats) */
+.achievements::after {
+    content: "";
+    clear: both;
+    display: table;
+    margin-top: -150px;
+    margin-bottom: 90px;
+}
+
+.achievements h4 {
+    color: #00fedc;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-bottom: 5%;
+    margin-top: 43%;
+    margin-left: 4%;
+    font-size: 25px;
+}
+body {
+    font-family: Arial, sans-serif;
+}
+
+.contact-container {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+   
+}
+
+.contact-box {
+    text-align: center;
+    padding: 20px;
+    margin-top: -2%;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    width: 30%;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.icon-container {
+    margin-bottom: 10px;
+}
+
+.contact-box i {
+    font-size: 36px;
+    color: #f8b600;
+    margin-bottom: 10px;
+}
+
+.contact-box h3 {
+    margin-bottom: 10px;
+    font-size: 20px;
+    color:violet;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact-box p {
+    margin: 0;
+    color:white;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.contact-image {
+    width: 25%;
+    height: 25;
+    margin-bottom: 10px;
+    border-radius: 5px;
+    object-fit: cover;
+}
+.contact{
+  max-width: 700px;
+  margin: auto;
+}
+.contact input,.contact textarea{
+  width: 100%;
+  padding: 15px;
+  border: 0;
+  margin-bottom: 10px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+
+.contact .submit{
+  width: auto;
+  background-color:#00fedc;
+  padding: 10px 40px;
+  font-weight:bold ;
+  font-size: 18px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  margin-left: 230px;
+}
+.contact .submit:hover{
+  transform: scale(1.1);
+  cursor: pointer;
+}
+#msg{
+  color: #fff;
+  font-size: 20px;
+  margin-top: -8px;
+  display: block;
+}
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+        
+        /* Section Styling */
+        body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 100vh; /* Ensure each section takes up at least the full viewport height */
+    padding: 50px 0; /* Padding for content inside the section */
+    margin: 0; /* Remove any default margin between sections */
+}
+
+        #home {
+            background-image: url('1.jpg');
+        }
+
+        #education {
+            background-image: url('5.jpg');
+            background-size: cover;  /* Ensures the background image covers the entire section */
+            background-position: center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Prevents the background image from repeating */
+            background-attachment: fixed;  /* Makes the background fixed while scrolling */
+            min-height: 100vh;  /* Ensures the section takes at least the full viewport height */
+            width: 100%;  /* Ensures the section takes the full width of the viewport */
+            padding: 50px 0;
+            
+        }
+        #projects{
+            background-image: url('5.jpg');
+            background-size: cover;  /* Ensures the background image covers the entire section */
+            background-position: center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Prevents the background image from repeating */
+            background-attachment: fixed;  /* Makes the background fixed while scrolling */
+            min-height: 80vh;  /* Ensures the section takes at least the full viewport height */
+            
+            width: 100%;  /* Ensures the section takes the full width of the viewport */
+            padding: 50px 0;
+        }
+        #achievements {
+            background-image: url('5.jpg');
+            background-size: cover;  /* Ensures the background image covers the entire section */
+            background-position: center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Prevents the background image from repeating */
+            background-attachment: fixed;  /* Makes the background fixed while scrolling */
+            /*min-height: 200vh;Ensures the section takes at least the full viewport height */
+            width: 100%;  /* Ensures the section takes the full width of the viewport */
+            padding: 50px 0;
+            height: 150%;
+        }
+
+        #contact {
+            margin-top:1cqb;
+            background-image: url('5.jpg');
+            background-size: cover;  /* Ensures the background image covers the entire section */
+            background-position: center;  /* Centers the background image */
+            background-repeat: no-repeat;  /* Prevents the background image from repeating */
+            background-attachment: fixed;  /* Makes the background fixed while scrolling */
+            min-height: 100vh;  /* Ensures the section takes at least the full viewport height */
+            width: 100%;  /* Ensures the section takes the full width of the viewport */
+            padding: 50px 0;
+            
+        }
+        /*---------------------------Footer---------------------------*/
+.footer {
+    max-width: 950px;
+    margin: 0 auto;
+    padding: 15px 0 26px;
+    border-top: 1px solid rgba(255, 255, 255, 0.1); 
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+  .footer .message {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+    margin-bottom: 10px;
+  }
+  
+  .copyright {
+    font-size: 12px;
+  }
+
+
+
+
+ /*------------------- Responsive Design on small screen -------------------*/
+
+/* Medium layout */
+@media only screen and (min-width:1000px) and (max-width:1200px){
+  .container{
+    width: 970px;
+  }
+}
+
+@media(max-width:1050px){
+  .FirstElement{ 
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .profile-text{
+    padding: 40px 0px;
+  }
+}
+
+
+
+/* tablet layout */
+@media only screen and (min-width:768px) and (max-width:999px){
+  .container{
+    width: 750px;
+  } 
+}  
+
+
+/* Mobile Layout */
+@media only screen and (max-width:767px){
+  .container{
+    width: 350px;
+  }
+
+  .header .menu_icon {
+    display: block;
+  }
+  .header ul{
+    display: none;
+  }
+  .header i{
+    color: #e5e5e5;
+  }
+
+  .profile-text{
+    width: 350px;
+  }
+  .FirstElement .profile-text p{
+    text-align: justify;
+  }
+  .about{
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .about-skills{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .education-content .row {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .education-content .row .education,
+  .education-content .row .internship {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .project{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+    </style>
+</head>
+<body>
+
+<header class="header-area">
+    <div class="container">
+        <div class="header">
+            <ul class="navbar">
+                <li><a href="#home">Home</a></li>
+                <li><a href="#education">Education</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#achievements">Achievements</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <div class="menu_icon">
+                <i class="fa fa-bars"></i>
+            </div>
+        </div>
+    </div>
+</header>
+
+<div class="content-wrapper" id="home">
+    <img src="hero-pic.jpg" alt="Profile Picture">
+    <div class="text">
+        <h5>I'm AARON SAM.AS</h5><br>
+        <p>
+            To work in a professional, dynamic and vibrant environment and to keep value-adding to the organizational
+            firm which I represent and serve while concurrently upgrading my skill, knowledge, and competence. Convert my
+            knowledge into the experience and develop my potential.
+        </p>
+
+        <!-- Add social icons here -->
+        <div class="social-icons" style="margin-top: -60px;">
+            <!-- LinkedIn Icon -->
+            <a href="https://www.linkedin.com/in/aaron-sam-31054522b/" target="_blank">
+                <img src="link.png" alt="LinkedIn" style="width: 40px; margin-right: 20px;">
+            </a>
+            
+            <!-- GitHub Icon -->
+            <a href="https://github.com/AaronSam-30052003" target="_blank">
+                <img src="git.png" alt="GitHub" style="width: 40px; margin-right: 20px;">
+            </a>
+            
+            <!-- Mail Icon -->
+            <a href="mailto:aaronvsam289@gmail.com">
+                <img src="mail.png" alt="Mail" style="width: 40px;">
+            </a>
+
+            <div class="btn-group">
+                <a href="AARON SAM.pdf" class="btn active">Download Resume</a>
+                
+            </div>
+        </div>
+    </div>
+
+    <div class="skills-wrapper">
+        <h5 style="color: #00fedc;font-size: 125%;font-family: Georgia, 'Times New Roman', Times, serif;
+        margin-top: 5%;margin-left: 25%;">SKILLS</h5>
+        <div class="skill-item">GenAI</div>
+        <div class="skill-item">Python</div>
+        <div class="skill-item">HTML/CSS</div>
+        <div class="skill-item">Java</div>
+        <div class="skill-item">Excel</div>
+    </div>
+</div>
+
+
+<section id="education">
+    <div class="edu-title">
+        <h5 >EDUCATION</h5>
+        
+    </div>
+    <div style="display: flex; justify-content: space-between;">
+        <!-- Timeline on the left side -->
+        <div class="timeline" style="flex: 1;">
+            <ul>
+                <li>
+                    <div class="timeline-content">
+                        <h3>Bachelor of Technology (8.7 till 6th sem)</h3>
+                        <p>Sethu Institute of Technology [Department of Artificial Intelligence & Data Science], Virudhunagar, TamilNadu (2021 - Present)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h3>Grade 12th (86.16%)</h3>
+                        <p>Seventh day Adventist Higher Secondary School, Madurai-16, TamilNadu (2020-2021)</p>
+                    </div>
+                </li>
+                <li>
+                    <div class="timeline-content">
+                        <h3>Grade 10th (75%)</h3>
+                        <p>Seventh day Adventist Higher Secondary School, Madurai-16, TamilNadu (2018-2019)</p>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        
+        <!-- Internship details on the right side -->
+        <div class="internship-details">
+            <div class="intern-title">
+                <h3>INTERNSHIP</h3>
+            </div>
+            <p><strong>Agiliz Tech (Bangalore, Karnataka)</strong><br>
+            Interval: November 2023 - December 2023<br>
+            Field of Knowledge: Training on Gen AI & Prompt Engineering<br>
+            Methodologies Project: Developed Chatbot for Medical Website</p>
+            
+            <p><strong>Blend Vidhya (On stream)</strong><br>
+            Interval: May 2023 - October 2023<br>
+            Field of Knowledge: Python programming<br>
+            Project: Cable TV management using Python connected with MySQL</p>
+            
+            <p><strong>Indo Metal Tech (Ambattur, Chennai)</strong><br>
+            Interval: March 2024 - April 2024<br>
+            Field of Knowledge: Image processing and Object detection<br>
+            Project: Detectiverse (Automatic screw counting using OpenCV)</p>
+        </div>
+    </div>
+</section>
+
+
+
+
+<section class="project-content" id="projects">
+    <div class="container">
+        <div class="project-title">
+            <h4>PROJECTS</h4>
+            <p>Click on image to view details</p>
+        </div>
+        <div class="projects">
+           <!-- 1st Project -->
+             <div class="project">
+                <a href="chatbot old.html" target="_blank">
+                <img src="chatbot.png" alt="Chatbot Icon" class="icon">
+                <h4>Cancer chatbot</h4>
+                <p>This is a basic implementation of the chatbot that uses an openapi key. It will only respond to user inquiries about cancer; otherwise, it won't respond at all.
+                </p>
+                </a>
+            </div>
+            <!-- 2nd Project -->
+            <div class="project">
+                <a href="detect.html" target="_blank">
+                <img src="detect.png" alt="Chatbot Icon" class="icon">
+                <h4>Detectiverse</h4>
+                <p>This Detective application would count screws in trays that were photographed using cameras by using sophisticated image processing and machine learning algorithms.</p>
+                </a>
+            </div>
+            <!-- 3rd Project -->
+            <div class="project">
+                <a href="dimdip.html" target="_blank">
+                <img src="dimdip.png" alt="Chatbot Icon" class="icon">
+                <h4>Automatic Dipping System</h4>
+                <p>This provide by actually dimming down the bright headlight of
+                    our vehicle to low beam automatically when it senses a vehicle at close proximity approaching from the other
+                    direction.
+                </p>
+                </a>
+            </div>
+        </div>
+
+        <div class="project-publications">
+            <h4>Project Publications:</h4>
+            <div class="images">
+                <img src="chatpub.png" alt="Chatbot Publication">
+                <img src="detectpub.png" alt="Detectiverse Publication">
+            </div>
+            <p>Successfully completed my projects and submitted them to STM Journal.</p>
+        </div>
+        <div class="row">
+            <h4>Project Presentations:</h4>
+            <p>Actively participated in multiple project presentations, effectively showcasing innovative ideas and solutions to diverse audiences.</p>
+            <div class="column">
+              <img src="pp1.jpeg" class="fade-in" style="width:95%;height: 262px;margin-left:6%">
+            </div>
+            <div class="column">
+              <img src="pp2.jpeg" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+              
+            </div>
+            <div class="column">
+              <img src="pp3.jpeg" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="column">
+                <img src="pp4.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="column">
+                <img src="pp5.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="column">
+                <img src="pp6.JPG" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+        </div>
+        
+        
+    </div>
+        
+
+            
+            
+</section>
+
+
+
+<section id="achievements">
+    <h5 style="color: #00fedc;font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 3%;text-align: center;" >ACHIEVEMENTS</h5><br>
+    <div class="achievements">
+        <div class="columns">
+              <img src="a1.png" class="fade-in" style="width:95%;height: 262px;margin-left:6%">
+            </div>
+            <div class="columns">
+              <img src="a2.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+              
+            </div>
+            <div class="columns">
+              <img src="a3.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="columns">
+                <img src="a4.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="columns">
+                <img src="a5.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="columns">
+                <img src="a6.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div><div class="columns">
+                <img src="a7.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="columns">
+                <img src="a8.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+            <div class="columns">
+                <img src="a9.png" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
+            </div>
+
+
+        </div>    
+    </div>
+</section>
+
+<section id="contact">
+    <h5 style="color: #00fedc;font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: -50%;margin-left: 45%;" >CONTACT</h5><br>
+    <div class="contact-container">
+        <div class="contact-box">
+            <div class="icon-container">
+                <i class="fa fa-map-marker"></i>
+            </div>
+            <img src="add.png" class="contact-image">
+            <h3>Address</h3>
+            <p>Maapalayam,Madurai-16.</p>
+        </div>
+        <div class="contact-box">
+            <div class="icon-container">
+                <i class="fa fa-phone"></i>
+            </div>
+            <img src="call.png"class="contact-image">
+            <h3>Call </h3>
+            <p>+91 8807402200</p>
+        </div>
+        <div class="contact-box">
+            <div class="icon-container">
+                <i class="fa fa-envelope"></i>
+            </div>
+            <img src="mail.png"class="contact-image">
+            <h3>Email Id</h3>
+            <p>aaronvsam289@gmail.com</p>
+        </div>
+    </div>
+    <div class="contact">
+        <form method="post"action="https://script.google.com/macros/s/AKfycbzbDdO-G02uBnqrY95txrPBlVhdVKGFPx86xOigTyRHR4qZuUb-wGBxgi33UcfOWnTNRw/exec" name="submitToGoogleSheet">
+            <input type="text" name="NAME" placeholder="Name" required>
+            <input type="email" name="EMAIL" placeholder="Email" required>
+            <input type="text" name="SUBJECT" placeholder="Subject">
+            <textarea name="MESSAGE" placeholder="Message"></textarea>
+            <input type="submit" value="Send Message" class="submit">
+        </form>
+        <span id="msg"></span>
+    </div>
+    
+</section>
+ <!-------------------------- JS -------------------------->
+ <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
+ <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
+ <script src="https://unpkg.com/scrollreveal"></script>
+ <script src="script.js"></script>
+ 
+ <!-------------------------- Footer section -------------------------->
+<footer class="footer">
+ <small class="message">Thanks for visiting</small>
+ <small class="copyright">&copy; Copyright 2023. All rights reserved.</small>
+</footer>
+
+
+
+</body>
+</html>
