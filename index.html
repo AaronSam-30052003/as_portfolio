@@ -6,522 +6,254 @@
     <title>AARON SAM.AS</title>
     <style>
         
-        body {
-            background-image: url('1.jpg');
-            background-size: cover;
-            margin: 0;
-            padding: 0;
-            font-family: Arial, sans-serif;
-            scroll-behavior: smooth; /* Enables smooth scrolling */
-        }
-
-        .header-area {
-            position: fixed; /* Keeps the header fixed at the top */
-            top: 0;
-            width: 100%; /* Ensures the header spans the full width of the page */
-            z-index: 1000; /* Keeps the header on top of other content */
-            background-color: rgba(0, 0, 0, 0.8); /* Optional: semi-transparent background */
-            padding: -1%;
-            text-align:end;
-        }
-
-        .header {
-            display: flex;
-            justify-content: space-between; /* Keeps items spaced evenly */
-            align-items: center;
-            margin-left: 780px;
-            margin-right: 0;
-            width: 80%; /* Adjust width to center the header content */
-            padding-top: 20px; /* Optional: Adjusts the position slightly lower vertically */
-        }
-        .navbar {
-            list-style: none;
-            display: flex;
-            padding: 0;
-            margin-bottom: 20px; /* Adds some space below the navbar */
-            justify-content:left; /* Centers the navbar horizontally */
-        }
-
-        .navbar li {
-            margin: 0 15px; /* Horizontal spacing between navbar items */
-            margin-right: 5%; /* Extra margin on the right */
-        }
-
-        .navbar li a {
-            color: #00aaff;
-            text-decoration: none;
-            font-weight: bold;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .menu_icon {
-            display: none;
-        }
-
-        .content-wrapper {
-            display: flex;
-            align-items: center;
-            padding: 55px; /* Added padding to offset fixed header */
-            min-height: 100vh; /* Ensure full viewport height */
-            justify-content: space-between;
-        }
-
-        .content-wrapper img {
-            border-radius: 50%;
-            margin-right: 50px;
-            border: 2px solid violet;
-            width: 300px;
-            height: auto;
-            margin-bottom:2%;
-        }
-
-        .text {
-            max-width: 500px;
-            flex: 1; /* Ensures text content takes up available space */
-            display: flex;
-            flex-direction: column;
-            margin-bottom: 10%;
-        }
-
-        .text h5 {
-            color: #00fedc;
-            font-size: 3rem;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            margin-top: 25%;
-        }
-        
-        .text p {
-            color: #ffffff;
-            font-size: 20px;
-            transform: translateY(-100px);
-            font-family:Georgia, 'Times New Roman', Times, serif;
-            text-align: justify;
-            margin-top: 5%;
-        }
-        .btn-group{
-  margin: 45px 0;
-  margin-top: -45px;
-}
-.btn-group .btn{
-  border-color: #d5d5d5;
-  color: #fff;
-  background-color: #333;
-  padding:12px 25px;
-  
-  margin-left: 299px;
-  margin-top: -50px;
-  border-radius: 30px;
-  border: 2px solid #e5e5e5;
-  box-shadow: 0 10px 10px -8px rgb(0 0 0 / 78%);
-}
-.btn.active{
-  border-color:#00fedc;
- 
-}
-
-        .skills-wrapper {
-            display: flex;
-            flex-direction: column; /* Stack the skill containers vertically */
-            align-items: flex-start; /* Align the skill containers to the right */
-            margin-left: 50px; /* Add some space between the text and the skills */
-        }
-
-        .skill-item {
-            border-radius: 20px; /* Rounded corners */
-            border: 2px solid #00aaff; /* Border color */
-            padding: 10px 15px; /* Padding inside each container */
-            margin-bottom: 10px; /* Space between skill containers */
-            font-weight: bold; /* Bold text */
-            font-family: Georgia, 'Times New Roman', Times, serif; /* Font style */
-            color: #00aaff; /* Text color to match the border */
-            background-color: transparent; /* Transparent background */
-            width: 200px; /* Fixed width to align containers */
-            text-align: center; /* Center the text inside the container */
-        }
-        .edu-title{
-            margin-top: 60px;
-            margin-left: 6%;
-        }
-        .edu-title h5{
-            color: #00fedc; 
-            font-size: 125%; 
-            font-family: Georgia, 'Times New Roman', Times, serif; 
-            margin-bottom: -10px; /* Space between the header and the timeline content */
-            text-align: left; /* Align the text to the right */
-            margin-left: 200px;
-        }
-        .timeline {
-            display: flex;
-            right:5%; /* Center the timeline horizontally */
-            align-items: center; /* Center the timeline vertically */
-            margin-left: 100px;
-        }
-        .timeline-item {
-            position: relative;
-            padding-left: 0;
-            margin-bottom: 50px;
-        }
-        .timeline ul {
-    list-style: none;
-    padding: 0;
+       body {
+    background-image: url('1.jpg');
+    background-size: cover;
     margin: 0;
-    max-width: 600px; /* Set a max-width to keep it within a reasonable size */
-    width: 100%; /* Ensure it takes full width of the container */
-    position: relative;
-}
-.timeline ul li {
-    margin-bottom: 20px;
-    padding-left: 10px; /* Adjust padding to ensure text aligns properly */
-    border-left: 2px solid #00aaff;
-    position: relative;
-}
-.timeline ul li::before {
-    
-    content: '';
-    position: absolute;
-    left: 0; /* Position the dot in the center horizontally */
-    transform: translateX(-50%); /* Center the dot horizontally */
-    top: 20px;
-    width: 15px;
-    height: 15px;
-    border-radius: 50%;
-    background-color: #00aaff;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    scroll-behavior: smooth;
 }
 
-
-        .timeline-item::before {
-            content: '';
-            position: absolute;
-            top: 0;
-            left: 50px;
-            transform: translateX(-40%); /* Center the vertical line */
-            height: 100%;
-            width: 2px;
-            background-color: #00aaff;
-            
-            
-        }
-        .timeline-item::after {
-            content: '';
-            position: absolute;
-            top: 10px;
-            left: 50%;
-            height: 20px;
-            width: 20px;
-            border-radius: 50%;
-            background-color: #00aaff;
-        }
-        .timeline-content {
-            background-color: rgba(255, 255, 255, 0.1);
-            padding: 10px 20px;
-            border-radius: 8px;
-            box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
-            margin-left: 0; /* Ensure no additional left margin */
-            width: auto; /* Remove width restriction if any */
-            max-width: 100%;
-        }
-        
-        .timeline-content h3 {
-            margin: 0 0 10px;
-            font-size: 18px;
-            color: #00fedc;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        .timeline-content p {
-            margin: 0;
-            font-size: 16px;
-            color: #ffffff;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        .timeline {
-            flex: 1; /* Allow timeline to take up one portion of the space */
-            max-width: 50%; /* Ensure timeline doesn't take more than half the space */
-        }
-
-        .internship-details {
-            flex: 1; /* Allow internship details to take up the remaining space */
-            max-width: 50%; /* Ensure internship details don't take more than half the space */
-            padding-left: 20px; /* Add some space between the timeline and internship details */
-        }
-
-        .timeline ul {
-            max-width: 100%; /* Ensure the timeline takes up the full width of its container */
-        }
-
-        .internship-details h3 {
-            margin-bottom: 20px;
-            color: #00fedc;
-            font-size: 18px;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-
-        .internship-details p {
-            color: #ffffff;
-            font-size: 16px;
-            margin-bottom: 20px;
-            line-height: 1.5;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-      
-        .project-content{
-            padding: 90px 0;
-        }
-        .project-title{
-        margin-bottom: 40px;
-        text-align: center;
-        }
-.project-title h4{
-  
-  margin-top: 40px;
-  font-size: 30px;
-  line-height: 40px;
-  color:#00fedc;
-  margin-bottom:20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.project-title p {
-    text-shadow: 1px 1px 1px rgb(0, 183, 255);
-    font-size: 30px;
-    padding: 10px;
-    width: auto; /* Auto width to fit content */
-    height: auto; /* Auto height to fit content */
-    margin-left: 3%; /* Adjust as needed */
-    white-space: nowrap; /* Prevents text from wrapping to a new line */
-    color:white;
-}
-
-.projects{
-  display: flex;
-  justify-content:space-between;
-  gap: 10px;;
-}
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 30px;
-    width: 30%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 25%;
-    transition: .3s;
-    margin-right: 50px;
-    margin-left: 50px;
-}
-.project-item img {
+/* Mobile-first styles */
+.header-area {
+    position: fixed;
+    top: 0;
     width: 100%;
-    height: auto;
-    border-radius: 10px;  /* Optional: Adds rounded corners to the images */
-    margin-bottom: 50px;  /* Space between image and description */
+    z-index: 1000;
+    background-color: rgba(0, 0, 0, 0.8);
+    padding: 10px;
+    text-align: center; /* Center header content on small screens */
 }
 
-.project-item p {
-    color: #ffffff;  /* Text color */
-    font-size: 16px;
-    text-align: center;  /* Centers the description text */
+.header {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    flex-direction: column; /* Stack header items vertically on mobile */
+}
+
+.navbar {
+    list-style: none;
+    display: flex;
+    flex-direction: column; /* Stack navbar items vertically on mobile */
+    padding: 0;
+    margin: 10px 0;
+}
+
+.navbar li {
+    margin: 10px 0;
+}
+
+.navbar li a {
+    color: #00aaff;
+    text-decoration: none;
+    font-weight: bold;
     font-family: Georgia, 'Times New Roman', Times, serif;
-    
 }
 
-.project h4{
-  font-size: 26px;
-  text-transform: capitalize;
-  margin: 20px 0;
-  counter-reset: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color:white;
+.content-wrapper {
+    display: flex;
+    flex-direction: column; /* Stack content vertically on mobile */
+    align-items: center;
+    padding: 20px;
+    min-height: 100vh;
 }
-.project p{
-  text-align: justify;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: white;
+
+.content-wrapper img {
+    border-radius: 50%;
+    margin-bottom: 20px;
+    width: 150px; /* Smaller image for mobile */
+    height: auto;
 }
-.project:hover{
-  border-color:#00fedc;
+
+.text {
+    max-width: 100%;
+    text-align: center; /* Center text on mobile */
+    margin-bottom: 20px;
 }
-.project-publications {
+
+.text h5 {
+    color: #00fedc;
+    font-size: 2rem;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.text p {
+    color: #ffffff;
+    font-size: 16px;
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-top: 20px;
+}
+
+.btn-group {
+    margin: 20px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.btn-group .btn {
+    margin-left: 0;
+    margin-top: 0;
+    padding: 10px 20px;
+    font-size: 14px;
+}
+
+.skills-wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Center skills on mobile */
+    margin: 20px 0;
+}
+
+.skill-item {
+    width: 80%;
+    margin-bottom: 10px;
     text-align: center;
-    margin-top: 5%; /* Adjust to position the section as needed */
+}
+
+.timeline,
+.internship-details {
+    width: 100%;
+    max-width: 100%;
+    margin-left: 0;
+    padding-left: 0;
+}
+
+.timeline ul {
+    max-width: 100%;
+}
+
+.timeline ul li {
+    padding-left: 0;
+    text-align: center;
+}
+
+.project-content {
+    padding: 20px 0;
+}
+
+.project-title h4 {
+    font-size: 20px;
+}
+
+.projects {
+    flex-direction: column; /* Stack projects vertically on mobile */
+    gap: 20px;
+}
+
+.project {
+    width: 100%;
+    margin: 10px 0;
 }
 
 .project-publications h4 {
-    color: #00fedc;
-    margin-bottom: 2%;
-    margin-left: -70%;
-    font-size: 25px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    margin-left: 0;
+    text-align: center;
 }
 
 .project-publications p {
-    color: white;
-    font-size: 19px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-top: -42%;
+    margin-top: 10px;
+    font-size: 18px;
+    text-align: center;
 }
 
 .project-publications .images {
-    display: flex;
-    justify-content: center; /* Center the images horizontally */
-    gap: 20px; /* Adjust space between images */
+    flex-direction: column;
+    align-items: center;
 }
 
 .project-publications img {
-    width: 600px; /* Set fixed width for images */
-    height: 500px; /* Maintain aspect ratio */
-    border-radius: 10px; /* Optional: rounded corners */
-    margin-top: 5%;
-}
-* {
-        box-sizing: border-box;
-      }
-
-      .column {
-        float: left;
-        width: 33.33%;
-        padding: 15px;
-        margin-left: 0%;
-        margin-right: -1%;
-        margin-bottom: -1%;
-        
-      }
-
-      /* Clearfix (clear floats) */
-      .row::after {
-        content: "";
-        clear: both;
-        display: table;
-        margin-top: 150px;
-        margin-bottom: 90px;
-        
-      }
-      .row h4{
-        color:#00fedc;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        margin-bottom: 5%;
-        margin-top: 43%;
-        margin-left: 4%;
-        font-size: 25px;
-      }
-      .row p{
-        color:white;
-        margin-left: 5%;
-        margin-top: -3%;
-        font-family: Georgia, 'Times New Roman', Times, serif;
-        font-size: 20px;
-      }
-      .columns {
-    float: left;
-    width: 33.33%;
-    padding: 15px;
-    margin-left: 0%;
-    margin-right: -1%;
-    margin-bottom: 40px; /* Add space between rows */
-    margin-top: -4%;
+    width: 100%;
+    height: auto;
 }
 
-/* Clearfix (clear floats) */
-.achievements::after {
-    content: "";
-    clear: both;
-    display: table;
-    margin-top: -150px;
-    margin-bottom: 90px;
-}
-
-.achievements h4 {
-    color: #00fedc;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    margin-bottom: 5%;
-    margin-top: 43%;
-    margin-left: 4%;
-    font-size: 25px;
-}
-body {
-    font-family: Arial, sans-serif;
+.row h4, .achievements h4 {
+    font-size: 20px;
+    margin-top: 20px;
+    margin-left: 0;
 }
 
 .contact-container {
-    display: flex;
-    justify-content: space-around;
-    padding: 20px;
-   
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
 }
 
 .contact-box {
+    width: 90%;
+    margin: 10px 0;
+}
+
+.contact input, .contact textarea {
+    font-size: 14px;
+    padding: 10px;
+}
+
+.contact .submit {
+    margin-left: 0;
     text-align: center;
-    padding: 20px;
-    margin-top: -2%;
-    border: 1px solid #ddd;
-    border-radius: 10px;
-    width: 30%;
-    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+    display: block;
+    width: 100%;
 }
 
-.icon-container {
-    margin-bottom: 10px;
+/* Media query for larger screens */
+@media (min-width: 768px) {
+    .header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .navbar {
+        flex-direction: row;
+        justify-content: center;
+    }
+
+    .content-wrapper {
+        flex-direction: row;
+        padding: 55px;
+    }
+
+    .content-wrapper img {
+        width: 300px;
+        margin-right: 50px;
+    }
+
+    .text {
+        text-align: left;
+        margin-bottom: 0;
+    }
+
+    .skills-wrapper {
+        align-items: flex-start;
+    }
+
+    .projects {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .project {
+        width: 30%;
+        margin: 0;
+    }
+
+    .project-publications .images {
+        flex-direction: row;
+    }
+
+    .contact-container {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    .contact-box {
+        width: 30%;
+    }
 }
 
-.contact-box i {
-    font-size: 36px;
-    color: #f8b600;
-    margin-bottom: 10px;
-}
-
-.contact-box h3 {
-    margin-bottom: 10px;
-    font-size: 20px;
-    color:violet;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.contact-box p {
-    margin: 0;
-    color:white;
-    font-size: 16px;
-    font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.contact-image {
-    width: 25%;
-    height: 25;
-    margin-bottom: 10px;
-    border-radius: 5px;
-    object-fit: cover;
-}
-.contact{
-  max-width: 700px;
-  margin: auto;
-}
-.contact input,.contact textarea{
-  width: 100%;
-  padding: 15px;
-  border: 0;
-  margin-bottom: 10px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-
-.contact .submit{
-  width: auto;
-  background-color:#00fedc;
-  padding: 10px 40px;
-  font-weight:bold ;
-  font-size: 18px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  margin-left: 230px;
-}
-.contact .submit:hover{
-  transform: scale(1.1);
-  cursor: pointer;
-}
-#msg{
-  color: #fff;
-  font-size: 20px;
-  margin-top: -8px;
-  display: block;
-}
-
-
-        
         /* Section Styling */
         body, html {
     margin: 0;
@@ -613,123 +345,7 @@ section {
 
 
 
- /*------------------- Responsive Design on small screen -------------------*/
-
-/* General mobile styles */
-@media only screen and (max-width: 768px) {
-
-    .header {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 10px;
-        width: 100%;
-        padding-top: 10px;
-    }
-
-    .navbar {
-        flex-direction: column;
-        align-items: flex-start;
-        margin-left: 0;
-        margin-right: 0;
-        margin-bottom: 10px;
-    }
-
-    .navbar li {
-        margin: 10px 0;
-    }
-
-    .content-wrapper {
-        flex-direction: column;
-        padding: 20px;
-        text-align: center;
-    }
-
-    .content-wrapper img {
-        width: 150px;
-        margin-right: 0;
-        margin-bottom: 20px;
-    }
-
-    .text h5 {
-        font-size: 2rem;
-        margin-top: 10%;
-    }
-
-    .text p {
-        font-size: 18px;
-        transform: none;
-        margin-top: 0;
-    }
-
-    .btn-group .btn {
-        margin-left: 0;
-        margin-top: 20px;
-        padding: 10px 20px;
-        width: 80%;
-        box-sizing: border-box;
-    }
-
-    .skills-wrapper {
-        margin-left: 0;
-        align-items: center;
-        width: 100%;
-    }
-
-    .skill-item {
-        width: 80%;
-        margin: 10px auto;
-    }
-
-    .edu-title h5 {
-        margin-left: 0;
-        text-align: center;
-    }
-
-    .timeline {
-        flex-direction: column;
-        margin-left: 0;
-    }
-
-     .project {
-                width: 100%;
-                margin: 20px 0;
-            }
-
-     .project img {
-                width: 100%;
-            }
-    .achievements img{
-                width:100%;
-    }
-
-
-    .contact-container {
-        flex-direction: column;
-        align-items: center;
-    }
-
-    .contact-box {
-        width: 90%;
-        margin-top: 20px;
-    }
-
-    .contact .submit {
-        width: 100%;
-        margin-left: 0;
-    }
-
-    /* Other sections adjustments */
-    #education, #projects, #achievements, #contact {
-        padding: 20px 0;
-        min-height: auto;
-    }
-
-    /* Footer */
-    .footer {
-        padding: 10px;
-        text-align: center;
-    }
-}
+ 
    </style>
 </head>
 <body>
