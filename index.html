@@ -608,21 +608,27 @@ section {
   }
   @media only screen and (max-width: 767px) {
     .header {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         text-align: center;
     }
     .menu_icon {
         display: block;
     }
     .navbar {
+        display: flex;
         flex-direction: column;
+        align-items: center;
         padding: 0;
     }
     .navbar li {
         margin: 10px 0;
     }
     .content-wrapper img {
-        width: 100px;
+        width: 100%;
+        max-width: 100px;
+        height: auto;
     }
     .skills-wrapper h5 {
         font-size: 1.5rem;
@@ -632,20 +638,25 @@ section {
         margin: 10px 0;
     }
     .contact-container {
+        display: flex;
         flex-direction: column;
         align-items: center;
     }
     .contact-box {
         width: 80%;
+        max-width: 600px;
     }
     .contact form input, .contact form textarea {
         width: 100%;
         margin: 5px 0;
+        padding: 10px;
+        box-sizing: border-box;
     }
     .project-title h4, .achievements h5, .contact h5 {
         font-size: 1.5rem;
     }
 }
+
 </style>
 </head>
 <body>
@@ -837,8 +848,17 @@ section {
                 <img src="pp6.JPG" class="fade-in" style="width:95%;height: 262px;margin-left:5%">
             </div>
         </div>
-        </div>
+        
+        
+    </div>
+        
+
+            
+            
 </section>
+
+
+
 <section id="achievements">
     <h5 style="color: #00fedc;font-size: 35px;font-family: Georgia, 'Times New Roman', Times, serif;
     margin-top: 3%;text-align: center;" >ACHIEVEMENTS</h5><br>
@@ -915,16 +935,21 @@ section {
         </form>
         <span id="msg"></span>
     </div>
-    </section>
+    
+</section>
  <!-------------------------- JS -------------------------->
  <script src="https://code.jquery.com/jquery-3.7.0.min.js" integrity="sha256-2Pmvv0kuTBOenSvLm6bvfBSSHrUJ+3A7x6P5Ebd07/g=" crossorigin="anonymous"></script>
  <script src="https://cdn.jsdelivr.net/npm/typed.js@2.0.12"></script>
  <script src="https://unpkg.com/scrollreveal"></script>
  <script src="script.js"></script>
-  <!-------------------------- Footer section -------------------------->
+ 
+ <!-------------------------- Footer section -------------------------->
 <footer class="footer">
  <small class="message">Thanks for visiting</small>
  <small class="copyright">&copy; Copyright 2023. All rights reserved.</small>
 </footer>
+
+
+
 </body>
 </html>
