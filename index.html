@@ -263,83 +263,87 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
       
-        .project-content{
-            padding: 90px 0;
+        .project-content {
+            padding: 60px 20px; /* Adjusted padding for mobile view */
         }
-        .project-title{
-        margin-bottom: 40px;
-        text-align: center;
+        
+        .project-title {
+            margin-bottom: 30px;
+            text-align: center; /* Center align title */
         }
-.project-title h4{
-  
-  margin-top: 40px;
-  font-size: 30px;
-  line-height: 40px;
-  color:#00fedc;
-  margin-bottom:20px;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-}
-.project-title p {
-    text-shadow: 1px 1px 1px rgb(0, 183, 255);
-    font-size: 30px;
-    padding: 10px;
-    width: auto; /* Auto width to fit content */
-    height: auto; /* Auto height to fit content */
-    margin-left: 3%; /* Adjust as needed */
-    white-space: nowrap; /* Prevents text from wrapping to a new line */
-    color:white;
-}
-
-.projects{
-  display: flex;
-  justify-content:space-between;
-  gap: 10px;;
-}
-.project{
-    /* padding: 30px 15px; */
-    color: #e5e5e5;
-    border: 2px solid #e5e5e5;
-    border-radius: 30px;
-    width: 30%;
-    position: relative;
-    padding: 25px;
-    text-align: center;
-    flex-basis: 25%;
-    transition: .3s;
-    margin-right: 50px;
-    margin-left: 50px;
-}
-.project-item img {
-    width: 100%;
-    height: auto;
-    border-radius: 10px;  /* Optional: Adds rounded corners to the images */
-    margin-bottom: 50px;  /* Space between image and description */
-}
-
-.project-item p {
-    color: #ffffff;  /* Text color */
-    font-size: 16px;
-    text-align: center;  /* Centers the description text */
-    font-family: Georgia, 'Times New Roman', Times, serif;
-    
-}
-
-.project h4{
-  font-size: 26px;
-  text-transform: capitalize;
-  margin: 20px 0;
-  counter-reset: white;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color:white;
-}
-.project p{
-  text-align: justify;
-  font-family: Georgia, 'Times New Roman', Times, serif;
-  color: white;
-}
-.project:hover{
-  border-color:#00fedc;
-}
+        
+        .project-title h4 {
+            margin-top: 30px; /* Adjusted margin for mobile view */
+            font-size: 24px; /* Reduced font size for mobile view */
+            line-height: 30px;
+            color: #00fedc;
+            margin-bottom: 10px; /* Adjusted margin for mobile view */
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .project-title p {
+            text-shadow: 1px 1px 1px rgb(0, 183, 255);
+            font-size: 24px; /* Reduced font size for mobile view */
+            padding: 10px;
+            width: auto;
+            height: auto;
+            margin-left: 0; /* Adjusted margin for mobile view */
+            white-space: nowrap;
+            color: white;
+        }
+        
+        .projects {
+            display: flex;
+            flex-wrap: wrap; /* Allows wrapping on smaller screens */
+            justify-content: center; /* Center items horizontally */
+            gap: 10px;
+        }
+        
+        .project {
+            color: #e5e5e5;
+            border: 2px solid #e5e5e5;
+            border-radius: 20px; /* Adjusted radius for mobile view */
+            width: 90%; /* Adjusted width for smaller screens */
+            max-width: 300px; /* Adjusted max width for smaller screens */
+            position: relative;
+            padding: 20px; /* Adjusted padding for mobile view */
+            text-align: center;
+            flex-basis: auto;
+            transition: 0.3s;
+            margin: 10px 0; /* Adjusted margin for mobile view */
+        }
+        
+        .project-item img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px; /* Adjusted radius for mobile view */
+            margin-bottom: 20px; /* Adjusted margin for mobile view */
+        }
+        
+        .project-item p {
+            color: #ffffff;
+            font-size: 14px; /* Reduced font size for mobile view */
+            text-align: center;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .project h4 {
+            font-size: 20px; /* Reduced font size for mobile view */
+            text-transform: capitalize;
+            margin: 15px 0; /* Adjusted margin for mobile view */
+            color: white;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+        }
+        
+        .project p {
+            text-align: justify;
+            font-family: Georgia, 'Times New Roman', Times, serif;
+            color: white;
+        }
+        
+        .project:hover {
+            border-color: #00fedc;
+        }
 .project-publications {
     text-align: center;
     margin-top: 5%; /* Adjust to position the section as needed */
