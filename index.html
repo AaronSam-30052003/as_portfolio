@@ -6,7 +6,7 @@
     <title>AARON SAM.AS</title>
     <style>
         
-        body {
+        body{
             background-image: url('1.jpg');
             background-size: cover;
             margin: 0;
@@ -263,87 +263,83 @@
             font-family: Georgia, 'Times New Roman', Times, serif;
         }
       
-        .project-content {
-            padding: 60px 20px; /* Adjusted padding for mobile view */
+        .project-content{
+            padding: 90px 0;
         }
-        
-        .project-title {
-            margin-bottom: 30px;
-            text-align: center; /* Center align title */
+        .project-title{
+        margin-bottom: 40px;
+        text-align: center;
         }
-        
-        .project-title h4 {
-            margin-top: 30px; /* Adjusted margin for mobile view */
-            font-size: 24px; /* Reduced font size for mobile view */
-            line-height: 30px;
-            color: #00fedc;
-            margin-bottom: 10px; /* Adjusted margin for mobile view */
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        
-        .project-title p {
-            text-shadow: 1px 1px 1px rgb(0, 183, 255);
-            font-size: 24px; /* Reduced font size for mobile view */
-            padding: 10px;
-            width: auto;
-            height: auto;
-            margin-left: 0; /* Adjusted margin for mobile view */
-            white-space: nowrap;
-            color: white;
-        }
-        
-        .projects {
-            display: flex;
-            flex-wrap: wrap; /* Allows wrapping on smaller screens */
-            justify-content: center; /* Center items horizontally */
-            gap: 10px;
-        }
-        
-        .project {
-            color: #e5e5e5;
-            border: 2px solid #e5e5e5;
-            border-radius: 20px; /* Adjusted radius for mobile view */
-            width: 90%; /* Adjusted width for smaller screens */
-            max-width: 300px; /* Adjusted max width for smaller screens */
-            position: relative;
-            padding: 20px; /* Adjusted padding for mobile view */
-            text-align: center;
-            flex-basis: auto;
-            transition: 0.3s;
-            margin: 10px 0; /* Adjusted margin for mobile view */
-        }
-        
-        .project-item img {
-            width: 100%;
-            height: auto;
-            border-radius: 8px; /* Adjusted radius for mobile view */
-            margin-bottom: 20px; /* Adjusted margin for mobile view */
-        }
-        
-        .project-item p {
-            color: #ffffff;
-            font-size: 14px; /* Reduced font size for mobile view */
-            text-align: center;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        
-        .project h4 {
-            font-size: 20px; /* Reduced font size for mobile view */
-            text-transform: capitalize;
-            margin: 15px 0; /* Adjusted margin for mobile view */
-            color: white;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-        }
-        
-        .project p {
-            text-align: justify;
-            font-family: Georgia, 'Times New Roman', Times, serif;
-            color: white;
-        }
-        
-        .project:hover {
-            border-color: #00fedc;
-        }
+.project-title h4{
+  
+  margin-top: 40px;
+  font-size: 30px;
+  line-height: 40px;
+  color:#00fedc;
+  margin-bottom:20px;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+}
+.project-title p {
+    text-shadow: 1px 1px 1px rgb(0, 183, 255);
+    font-size: 30px;
+    padding: 10px;
+    width: auto; /* Auto width to fit content */
+    height: auto; /* Auto height to fit content */
+    margin-left: 3%; /* Adjust as needed */
+    white-space: nowrap; /* Prevents text from wrapping to a new line */
+    color:white;
+}
+
+.projects{
+  display: flex;
+  justify-content:space-between;
+  gap: 10px;;
+}
+.project{
+    /* padding: 30px 15px; */
+    color: #e5e5e5;
+    border: 2px solid #e5e5e5;
+    border-radius: 30px;
+    width: 30%;
+    position: relative;
+    padding: 25px;
+    text-align: center;
+    flex-basis: 25%;
+    transition: .3s;
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.project-item img {
+    width: 100%;
+    height: auto;
+    border-radius: 10px;  /* Optional: Adds rounded corners to the images */
+    margin-bottom: 50px;  /* Space between image and description */
+}
+
+.project-item p {
+    color: #ffffff;  /* Text color */
+    font-size: 16px;
+    text-align: center;  /* Centers the description text */
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    
+}
+
+.project h4{
+  font-size: 26px;
+  text-transform: capitalize;
+  margin: 20px 0;
+  counter-reset: white;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color:white;
+}
+.project p{
+  text-align: justify;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  color: white;
+}
+.project:hover{
+  border-color:#00fedc;
+}
 .project-publications {
     text-align: center;
     margin-top: 5%; /* Adjust to position the section as needed */
@@ -523,7 +519,26 @@ body {
   margin-top: -8px;
   display: block;
 }
-/* Section Styling */
+
+
+
+
+
+    
+    
+
+    
+    
+
+
+
+
+
+
+
+
+        
+        /* Section Styling */
         body, html {
     margin: 0;
     padding: 0;
@@ -610,58 +625,91 @@ section {
   .copyright {
     font-size: 12px;
   }
-  @media only screen and (max-width: 767px) {
-    .header {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
-    }
-    .menu_icon {
-        display: block;
-    }
-    .navbar {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-        padding: 0;
-    }
-    .navbar li {
-        margin: 10px 0;
-    }
-    .content-wrapper img {
-        width: 100%;
-        max-width: 100px;
-        height: auto;
-    }
-    .skills-wrapper h5 {
-        font-size: 1.5rem;
-    }
-    .project, .columns img {
-        width: 100%;
-        margin: 10px 0;
-    }
-    .contact-container {
-        display: flex;
-        flex-direction: column;
-        align-items: center;
-    }
-    .contact-box {
-        width: 80%;
-        max-width: 600px;
-    }
-    .contact form input, .contact form textarea {
-        width: 100%;
-        margin: 5px 0;
-        padding: 10px;
-        box-sizing: border-box;
-    }
-    .project-title h4, .achievements h5, .contact h5 {
-        font-size: 1.5rem;
-    }
+
+
+
+
+ /*------------------- Responsive Design on small screen -------------------*/
+
+/* Medium layout */
+@media only screen and (min-width:1000px) and (max-width:1200px){
+  .container{
+    width: 970px;
+  }
 }
 
-</style>
+@media(max-width:1050px){
+  .FirstElement{ 
+    flex-direction: column;
+    padding-top: 2rem;
+  }
+  .profile-text{
+    padding: 40px 0px;
+  }
+}
+
+
+
+/* tablet layout */
+@media only screen and (min-width:768px) and (max-width:999px){
+  .container{
+    width: 750px;
+  } 
+}  
+
+
+/* Mobile Layout */
+@media only screen and (max-width:767px){
+  .container{
+    width: 350px;
+  }
+
+  .header .menu_icon {
+    display: block;
+  }
+  .header ul{
+    display: none;
+  }
+  .header i{
+    color: #e5e5e5;
+  }
+
+  .profile-text{
+    width: 350px;
+  }
+  .FirstElement .profile-text p{
+    text-align: justify;
+  }
+  .about{
+    flex-direction: column;
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+  .about-skills{
+    width: 100%;
+    margin-top: 30px;
+  }
+  .education-content .row {
+    flex-direction: column;
+    height: auto;
+    margin-bottom: 50px;
+  }
+
+  .education-content .row .education,
+  .education-content .row .internship {
+    flex-basis: 100%;
+    max-width: 100%;
+    margin-top: 30px;
+  }
+  .project{
+    flex-basis: 100%;
+    margin-bottom: 30px;
+  }
+
+}
+
+
+    </style>
 </head>
 <body>
 
@@ -957,3 +1005,4 @@ section {
 
 </body>
 </html>
+
